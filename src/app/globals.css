@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme inline{
+    --color-primary:var(--color-neutral-900);
+    --color-secondary:var(--color-neutral-800);
+}
