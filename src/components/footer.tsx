@@ -1,7 +1,7 @@
 export const Footer = () => {
     return (
         <footer className="bg-neutral-950 text-neutral-100">
-            <div className="max-w-7xl mx-auto px-4 py-12">
+            <div className="max-w-7xl mx-auto px-10 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div className="space-y-4">

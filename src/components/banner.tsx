@@ -7,7 +7,7 @@ export const Banner = () => {
         "https://quickcart-gs.vercel.app/_next/static/media/md_controller_image.036005e4.png"
     ]
     return (
-        <div className="bg-neutral-950 w-full px-10 flex justify-center">
+        <div className="bg-neutral-950 w-full px-10 py-5 flex justify-center">
             <div className="flex justify-between border-[1px] rounded-2xl border-neutral-800 bg-neutral-900 w-[80%]">
             <Image
                 width={400}

@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export const FeaturedProducts = () => {
     return (
-        <div className="w-full flex flex-col px-10 bg-neutral-950 items-center gap-10">
+        <div className="w-full flex flex-col px-10 bg-neutral-950 items-center py-5 gap-2.5">
             <div className="text-white text-3xl font-semibold tracking-tighter">Featured Products</div>
             <div className="flex w-full justify-between">
                 {

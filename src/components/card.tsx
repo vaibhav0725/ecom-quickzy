@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Link from "next/link"
 
 export const Card = () => {
     const cardData = [
@@ -22,16 +22,17 @@ export const Card = () => {
     
     ]
     return (
-        <div className="bg-neutral-950 py-10 px-10 flex justify-around">
+        <div className="bg-neutral-950 py-5 px-10 flex justify-between">
             {
                 cardData.map((data, idx) => (
                     <div
                         key={idx}
-                        className="relative w-[350px] h-[550px] rounded-2xl overflow-hidden bg-cover bg-center hover:opacity-80 transition-all duration-300"
+                        className="relative w-[350px] h-[550px] rounded-2xl overflow-hidden bg-cover bg-center"
                         style={{ backgroundImage: `url(${data.img})` }}>
-                        <div className="absolute bottom-0 w-xs px-5 py-4 text-white">
-                            <h2 className="text-2xl font-semibold tracking-tight">{data.title}</h2>
+                        <div className="absolute bottom-0 w-xs px-5 py-4 text-white flex flex-col items-start gap-2">
+                            <h2 className="text-3xl font-semibold tracking-tight">{data.title}</h2>
                             <p className="text-sm">{data.desc}</p>
+                            <Link href="/shop" className="text-md bg-neutral-900/45 rounded-2xl px-3 py-1.5">View</Link>
                         </div>
                     </div>
                 ))
