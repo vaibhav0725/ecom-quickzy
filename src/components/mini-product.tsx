@@ -18,7 +18,7 @@ export const MiniProduct = ({title,description,price,image,id}:{
                 height={400}
                 src={image}
                 alt="Premium Wireless Headphones"
-                className="w-[150px] h-[150px] rounded-2xl bg-neutral-800"
+                className="w-[150px] h-[150px] rounded-2xl bg-neutral-900"
                 priority
             />
             <h2 className="text-md font-bold tracking-tighter text-white w-[150px]">{title}</h2>

@@ -2,6 +2,8 @@ import { Bar } from "./bar"
 import { CartButton } from "./button"
 import Image from "next/image"
 import { data } from "../../public/data"
+import { ShoppingCart,ShoppingBag } from 'lucide-react';
+
 
 export const Product = ({params}:{params:{slug:string}}) => {
     const product = data.find((item)=>item.id === params.slug);
@@ -9,13 +11,13 @@ export const Product = ({params}:{params:{slug:string}}) => {
         return (<div>product not found</div>);
     }
     return (
-        <div className="max-h-screen flex gap-10 px-10 py-5 bg-neutral-950 text-white">
+        <div className="max-h-screen flex gap-10 px-10 bg-neutral-950 text-white">
             <Image
                 width={400}
                 height={400}
                 src={product.image}
                 alt={product.title}
-                className="w-[500px] h-[500px] rounded-2xl bg-neutral-600"
+                className="w-[500px] h-[500px] rounded-2xl bg-neutral-900"
                 priority
             />
             <div className="h-[500px] flex flex-col justify-around">
@@ -36,8 +38,14 @@ export const Product = ({params}:{params:{slug:string}}) => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center gap-10 px-20 pt-20 bottom">
-                    <CartButton/>
-                    <CartButton/>
+                    <CartButton>
+                        <ShoppingCart/>
+                        Add To Cart
+                    </CartButton>
+                    <CartButton>
+                        <ShoppingBag/>
+                        Buy Now
+                    </CartButton>
                 </div>
             </div>
         </div>
