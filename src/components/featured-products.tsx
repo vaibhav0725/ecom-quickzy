@@ -6,12 +6,7 @@ export const FeaturedProducts = () => {
         <div className="w-full flex flex-col items-center">
             <div className="">featured products</div>
             <div className="flex items-center justify-between px-10 py-10 gap-10">
-                <MiniProduct/>
-                <MiniProduct/>
-                <MiniProduct/>
-                <MiniProduct/>
-                <MiniProduct/>
-                <MiniProduct/>
+                
             </div>
             <CartButton/>
         </div>

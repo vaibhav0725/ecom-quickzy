@@ -1,24 +1,27 @@
 import { Bar } from "./bar"
 import { CartButton } from "./button"
-import { ImageBox } from "./image-box"
 import Image from "next/image"
+import { data } from "../../public/data"
 
-
-export const Product = () => {
+export const Product = ({params}:{params:{slug:string}}) => {
+    const product = data.find((item)=>item.id === params.slug);
+    if(!product) {
+        return (<div>product not found</div>);
+    }
     return (
-        <div className="max-h-screen flex gap-10 px-10 py-5">
+        <div className="max-h-screen flex gap-10 px-10 py-5 bg-neutral-950 text-white">
             <Image
                 width={400}
                 height={400}
-                src="https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/m16coelz8ivkk9f0nwrz.webp"
-                alt="Premium Wireless Headphones"
-                className="w-[500px] h-[500px] border-black border-2 rounded-2xl bg-neutral-500"
+                src={product.image}
+                alt={product.title}
+                className="w-[500px] h-[500px] rounded-2xl bg-neutral-600"
                 priority
             />
-            <div className="my-auto">
-                <h1 className="text-3xl font-bold tracking-tighter">Headphones</h1>
-                <p className="text-md">Experience crystal-clear sound with our premium wireless headphones. Featuring active noise cancellation, 30-hour battery life, and ultra-comfortable memory foam ear cushions. Perfect for music, calls, and immersive gaming sessions.</p>
-                <h2 className="text-2xl font-bold tracking-tight">300$</h2>
+            <div className="h-[500px] flex flex-col justify-around">
+                <h1 className="text-3xl font-bold tracking-tighter">{product.title}</h1>
+                <p className="text-md">{product.description}</p>
+                <h2 className="text-2xl font-bold tracking-tight">${product.price}</h2>
                 <Bar/>
                 <div className="flex flex-row gap-20">
                     <div className="grid grid-cols-1">
@@ -27,12 +30,12 @@ export const Product = () => {
                         <span className="font-bold">Category</span>
                     </div>
                     <div className="grid grid-cols-1">
-                        <span>BrandName</span>
-                        <span>ColorType</span>
-                        <span>CategoryType</span>
+                        <span>{product.brand}</span>
+                        <span>{product.color}</span>
+                        <span>{product.category}</span>
                     </div>
                 </div>
-                <div className="flex items-center gap-10 px-20 pt-20">
+                <div className="flex items-center justify-center gap-10 px-20 pt-20 bottom">
                     <CartButton/>
                     <CartButton/>
                 </div>

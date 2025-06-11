@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-gray-300">
+        <footer className="bg-neutral-950 text-neutral-100">
             <div className="max-w-7xl mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Company Info */}
@@ -43,7 +43,7 @@ export const Footer = () => {
                 </div>
 
                 {/* Social Media & Copyright */}
-                <div className="border-t border-gray-800 mt-12 pt-8">
+                <div className="border-t border-neutral-800 mt-12 pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex space-x-6 mb-4 md:mb-0">
                             <a href="#" className="hover:text-white transition">
