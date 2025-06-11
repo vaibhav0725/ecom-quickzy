@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export const Product = () => {
     return (
-        <div className="min-h-screen flex gap-5 px-10 py-5">
+        <div className="max-h-screen flex gap-10 px-10 py-5">
             <Image
                 width={400}
                 height={400}
@@ -15,7 +15,7 @@ export const Product = () => {
                 className="w-[500px] h-[500px] border-black border-2 rounded-2xl bg-neutral-500"
                 priority
             />
-            <div className="">
+            <div className="my-auto">
                 <h1 className="text-3xl font-bold tracking-tighter">Headphones</h1>
                 <p className="text-md">Experience crystal-clear sound with our premium wireless headphones. Featuring active noise cancellation, 30-hour battery life, and ultra-comfortable memory foam ear cushions. Perfect for music, calls, and immersive gaming sessions.</p>
                 <h2 className="text-2xl font-bold tracking-tight">300$</h2>
