@@ -27,9 +27,9 @@ export const Card = () => {
                 cardData.map((data, idx) => (
                     <div
                         key={idx}
-                        className="relative w-[350px] h-[550px] rounded-2xl overflow-hidden bg-cover bg-center"
+                        className="flex flex-col justify-end w-[350px] h-[550px] rounded-2xl overflow-hidden bg-cover bg-center hover:scale-105 transition duration-300 ease-in-out"
                         style={{ backgroundImage: `url(${data.img})` }}>
-                        <div className="absolute bottom-0 w-xs px-5 py-4 text-white flex flex-col items-start gap-2">
+                        <div className="w-xs px-5 py-4 text-white flex flex-col items-start gap-2">
                             <h2 className="text-3xl font-semibold tracking-tight">{data.title}</h2>
                             <p className="text-sm">{data.desc}</p>
                             <Link href="/shop" className="text-md bg-neutral-900/45 rounded-2xl px-3 py-1.5">View</Link>

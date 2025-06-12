@@ -9,7 +9,7 @@ export default function Shop() {
                 {
                     data.map((p,idx)=>(
                         <div key={idx}>
-                            <MiniProduct title={p.title} description={p.description} image={p.image} price={p.price} id={p.id}/>
+                            <MiniProduct link={true} title={p.title} description={p.description} image={p.image} price={p.price} id={p.id}/>
                         </div>
                     ))
                 }
