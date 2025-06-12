@@ -5,8 +5,8 @@ import { data } from "../../public/data"
 import { ShoppingCart,ShoppingBag } from 'lucide-react';
 
 
-export const Product = ({params}:{params:{slug:string}}) => {
-    const product = data.find((item)=>item.id === params.slug);
+export const Product = ({slug}:{slug:string}) => {
+    const product = data.find((item)=>item.id === slug);
     if(!product) {
         return (<div>product not found</div>);
     }
