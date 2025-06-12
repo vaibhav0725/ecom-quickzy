@@ -1,17 +1,13 @@
 import { FeaturedProducts } from "@/components/featured-products";
 import { Product } from "@/components/product";
 
-interface PageProps {
-    params: {
-      slug: string;
-    };
-  }
-    //@ts-ignore
-export default function ProductPage({ params }:PageProps) {
-    //@ts-ignore
+export default async function ProductPage({ params }:{
+    params: Promise<{slug:string}>
+}) {
+    const {slug} = await params;
     return (
         <div className="w-full h-full">
-            <Product slug={params.slug}/>
+            <Product slug={slug}/>
             <FeaturedProducts link={false}/>
         </div>
     )
