@@ -7,7 +7,7 @@ interface PageProps {
     };
   }
 
-export default async function ProductPage({ params }:PageProps) {
+export default function ProductPage({ params }:PageProps) {
     return (
         <div className="w-full h-full">
             <Product slug={params.slug}/>
