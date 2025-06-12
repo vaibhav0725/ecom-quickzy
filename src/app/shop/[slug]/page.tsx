@@ -5,7 +5,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     return (
         <div className="w-full h-full">
             <Product params={params}/>
-            <FeaturedProducts/>
+            <FeaturedProducts link={false}/>
         </div>
     )
 }

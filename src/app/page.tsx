@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Carousel/>
       <Card/>
-      <FeaturedProducts/>
+      <FeaturedProducts link={true}/>
       <Banner/>
     </div>
   )
