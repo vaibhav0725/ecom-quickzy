@@ -25,7 +25,9 @@ export const MiniProduct = ({title,description,price,image,id}:{
             <h3 className="text-xs text-neutral-100 w-[150px]">{truncate(description)}</h3>
             <div className="flex items-center justify-between text-neutral-50 w-[150px]">
                 <h2 className="text-sm">${price}</h2>
-                <button className="text-xs border-[1px] border-neutral-800 px-2 py-1 rounded-2xl">Buy Now</button>
+                <button className="text-xs border-[1px] border-neutral-800 px-2 py-1 rounded-2xl hover:bg-neutral-100 hover:text-neutral-950">
+                    <Link href={`shop/${id}`}>Buy Now</Link>
+                </button>
             </div>
         </Link>
     )

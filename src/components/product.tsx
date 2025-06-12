@@ -11,7 +11,7 @@ export const Product = ({params}:{params:{slug:string}}) => {
         return (<div>product not found</div>);
     }
     return (
-        <div className="max-h-screen flex gap-10 px-10 bg-neutral-950 text-white">
+        <div className="max-h-screen flex justify-between px-10 py-5 bg-neutral-950 text-white w-full">
             <Image
                 width={400}
                 height={400}
@@ -20,7 +20,7 @@ export const Product = ({params}:{params:{slug:string}}) => {
                 className="w-[500px] h-[500px] rounded-2xl bg-neutral-900"
                 priority
             />
-            <div className="h-[500px] flex flex-col justify-around">
+            <div className="h-[500px] flex flex-col justify-between w-[55%]">
                 <h1 className="text-3xl font-bold tracking-tighter">{product.title}</h1>
                 <p className="text-md">{product.description}</p>
                 <h2 className="text-2xl font-bold tracking-tight">${product.price}</h2>

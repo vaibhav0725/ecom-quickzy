@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div>
       <Carousel/>
-      <FeaturedProducts/>
       <Card/>
+      <FeaturedProducts/>
       <Banner/>
     </div>
   )

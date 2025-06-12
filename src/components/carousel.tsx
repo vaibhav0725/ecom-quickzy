@@ -22,8 +22,8 @@ export const Carousel = () => {
         return () => clearInterval(timer);
     },[])
     return (
-        <div className="bg-neutral-950 px-10 py-10">
-            <div className="flex justify-around border-[1px] border-neutral-800 bg-neutral-950 rounded-2xl px-13 py-10 text-neutral-100">
+        <div className="bg-neutral-950 px-10 py-5">
+            <div className="flex justify-around border-[1px] border-neutral-800 bg-neutral-900 rounded-2xl px-13 py-10 text-neutral-100">
                 <div className="h-[325px] relative">
                     <p className="text-md">{extra[index].info}</p>
                     <h1 className="text-5xl w-xl mt-1 font-bold tracking-tight">{extra[index].heading}</h1>

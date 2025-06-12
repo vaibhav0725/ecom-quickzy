@@ -20,7 +20,9 @@ export const Banner = () => {
             <div className="text-white flex flex-col items-center gap-4 py-8">
                 <h1 className="text-2xl font-semibold tracking-tight text-center">Level Up Your <br></br>Gaming Experience</h1>
                 <p className="text-center w-xs">From immersive sound to precise controls—everything you need to win</p>
-                <Link href="/shop" className="text-md border-neutral-800 border-[1px] py-2 px-4 rounded-full">View More</Link>
+                <Link href="/shop" className="text-md border-neutral-800 border-[1px] py-2 px-4 rounded-full hover:bg-white hover:text-neutral-900">
+                    View More
+                </Link>
             </div>
             <Image
                 width={400}
